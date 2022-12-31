@@ -1,9 +1,20 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import { View, SafeAreaView, FlatList, Text } from 'react-native';
+import AppBar from '../Components/AppBar';
 
 const LoginPage = () => {
     return (
-        <Text>LoginPage</Text>
+        <View>
+            <AppBar />
+            <View>
+
+                <Text > naber</Text>
+                <Text > naber</Text>
+                <Text > naber</Text>
+            </View>
+
+        </View>
+
     )
 }
 

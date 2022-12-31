@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
 
-const DashBoard = () => {
+const DashBoardPage = () => {
     return (
-        <Text>DashBoard</Text>
+        <Text>DashBoardPage</Text>
     )
 }
 
-export default DashBoard
+export default DashBoardPage
