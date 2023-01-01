@@ -1,17 +1,21 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
-import { StatusBar } from 'expo-status-bar'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+import CustomButton from './CustomButton'
 
-const AppBar = () => {
+
+interface model {
+
+    clicked: Function
+}
+
+const AppBar = (model: model) => {
+
     return (
-        <SafeAreaView  >
-            <StatusBar animated={true} backgroundColor={Colors.primary} />
-            <View style={{ height: 10 }} />
+        <View  >
+            <CustomButton title='Back' onPress={() => { model.clicked(); }} />
 
 
-        </SafeAreaView>
-        // <StatusBar animated={true} backgroundColor={Colors.primary} />
+        </View>
     )
 }
 

@@ -4,12 +4,14 @@ import React from 'react'
 import DashBoardPage from './src/Pages/DashBoardPage'
 import LoginPage from './src/Pages/LoginPage'
 import { useFonts } from 'expo-font'
-
+import { Provider } from 'react-redux'
+import { store } from './src/app/store';
 
 const App = () => {
 
 
   const Stack = createStackNavigator();
+
 
   const theme = {
     ...DefaultTheme,
@@ -35,18 +37,20 @@ const App = () => {
   return (
 
 
+    <Provider store={store} >
 
-    <NavigationContainer theme={theme}>
 
-      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="LoginPage" >
+      <NavigationContainer theme={theme}    >
 
-        <Stack.Screen component={LoginPage} name="LoginPage " />
-        <Stack.Screen component={DashBoardPage} name="DashboardPage " />
+        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="LoginPage" >
 
-      </Stack.Navigator >
+          <Stack.Screen component={LoginPage} name="LoginPage" />
+          <Stack.Screen component={DashBoardPage} name="DashBoardPage" />
 
-    </NavigationContainer>
+        </Stack.Navigator >
 
+      </NavigationContainer>
+    </Provider>
 
   )
 }
