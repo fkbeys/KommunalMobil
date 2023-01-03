@@ -4,7 +4,7 @@ import AppBar from '../Components/AppBar';
 import CustomButton from '../Components/CustomButton';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAppSelector } from '../app/hooks';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MobileUserLoginResultModel } from '../Model/Login/MobileUserLoginResultModel';
 
@@ -35,6 +35,7 @@ const DashBoardPage = (model: any) => {
     return (
 
         <SafeAreaView>
+
             <AppBar clicked={() => { model.navigation.goBack(); }} />
             <Text>
                 {/* {LoginSlice?.LoginList?.expiration} */}
